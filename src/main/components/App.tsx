@@ -1,5 +1,10 @@
 import React from 'react';
+
+import { schedules } from '../stub/schedules';
+import { ScheduleTable } from './ScheduleTable';
+
 import logo from '../images/logo.svg';
+import { jst } from '../modules/utils/dateUtil';
 import '../styles/App.css';
 
 export const App = () => (
@@ -18,5 +23,9 @@ export const App = () => (
         Learn React
       </a>
     </header>
+    <ScheduleTable
+      range={{ begin: jst('2020-01-01'), end: jst('2020-01-10') }}
+      schedules={schedules}
+    />
   </div>
 );
